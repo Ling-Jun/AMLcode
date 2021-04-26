@@ -165,4 +165,6 @@ pipeline = generated_pipeline()
 pipeline.validate()
 
 # submit a pipeline run
-# pipeline.submit(experiment_name='sample-experiment-name').wait_for_completion()
+pipeline.submit(experiment_name='sample-experiment-name').wait_for_completion()
+
+print(' Experiment completed')
