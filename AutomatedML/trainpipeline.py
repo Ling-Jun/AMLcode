@@ -193,13 +193,3 @@ import requests
 response = requests.post(published_pipeline1.endpoint, 
                          json={"ExperimentName": "Titanic_Pipeline_Notebook",
                                "ParameterAssignments": {"pipeline_arg": 20}})
-
-from azureml.pipeline.core import PipelineEndpoint
-
-published_pipeline = PipelineEndpoint.get(workspace=ws, name="Published_Titanic_Pipeline_Notebook")
-pipeline_endpoint = PipelineEndpoint.publish(workspace=ws, name="TitanicPipelineEndpointTest",
-                                            pipeline=published_pipeline, description="Test Published_Titanic_Pipeline_Notebook description Notebook")
-
-pipeline_endpoint_by_name = PipelineEndpoint.get(workspace=ws, name="Published_Titanic_Pipeline_Notebook")
-run_id = pipeline_endpoint_by_name.submit("PipelineEndpointExperiment")
-print(run_id)
