@@ -1,6 +1,6 @@
 import logging
 
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import pandas as pd
 import os
 
@@ -11,7 +11,7 @@ from azureml.core.dataset import Dataset
 from azureml.train.automl import AutoMLConfig
 from azureml.core.compute import ComputeTarget, AmlCompute
 from azureml.core.compute_target import ComputeTargetException
-from azureml.widgets import RunDetails
+# from azureml.widgets import RunDetails
 from sklearn.metrics import confusion_matrix
 
 from azureml.core.authentication import ServicePrincipalAuthentication
