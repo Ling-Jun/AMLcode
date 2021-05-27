@@ -51,21 +51,21 @@ ws = Workspace.get(name="mlopsdev",
                    subscription_id="c46a9435-c957-4e6c-a0f4-b9a597984773", resource_group="mlops")
 
 #ws = Workspace.from_config()
-keyvault = ws.get_default_keyvault()
-tenantid = keyvault.get_secret(name="tenantid")
-acclientid = keyvault.get_secret(name="acclientid")
-accsvcname = keyvault.get_secret(name="accsvcname")
-accsecret = keyvault.get_secret(name="accsecret")
+# keyvault = ws.get_default_keyvault()
+# tenantid = keyvault.get_secret(name="tenantid")
+# acclientid = keyvault.get_secret(name="acclientid")
+# accsvcname = keyvault.get_secret(name="accsvcname")
+# accsecret = keyvault.get_secret(name="accsecret")
 
-print(accsvcname)
+# print(accsvcname)
 
-sp = ServicePrincipalAuthentication(tenant_id=tenantid, # tenantID
-                                    service_principal_id=acclientid, # clientId
-                                    service_principal_password=accsecret) # clientSecret
+#sp = ServicePrincipalAuthentication(tenant_id=tenantid, # tenantID
+#                                    service_principal_id=acclientid, # clientId
+#                                    service_principal_password=accsecret) # clientSecret
 
-ws = Workspace.get(name="mlopsdev",
-                   auth=sp,
-                   subscription_id="c46a9435-c957-4e6c-a0f4-b9a597984773", resource_group="mlops")
+# ws = Workspace.get(name="mlopsdev",
+#                   auth=sp,
+#                   subscription_id="c46a9435-c957-4e6c-a0f4-b9a597984773", resource_group="mlops")
 
 ws.get_details()
 
