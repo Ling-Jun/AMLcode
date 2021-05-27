@@ -4,9 +4,6 @@ from azureml.core import Keyvault
 import os
 
 from azureml.core import Workspace, Experiment
-from azureml.train.automl import AutoMLImageConfig
-from azureml.train.hyperdrive import GridParameterSampling
-from azureml.train.hyperdrive import choice
 
 from azureml.contrib.dataset.labeled_dataset import _LabeledDatasetFactory, LabeledDatasetTask
 from azureml.core import Dataset
