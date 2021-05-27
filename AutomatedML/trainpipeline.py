@@ -19,12 +19,6 @@ from azureml.core import Workspace
 import urllib
 from zipfile import ZipFile
 
-from azureml.train.automl import AutoMLImageConfig
-from azureml.train.hyperdrive import GridParameterSampling, RandomParameterSampling, BayesianParameterSampling
-from azureml.train.hyperdrive import BanditPolicy, HyperDriveConfig, PrimaryMetricGoal
-from azureml.train.hyperdrive import choice, uniform
-from IPython.display import Image
-
 from azureml.core.compute import ComputeTarget, AmlCompute
 from azureml.core.runconfig import RunConfiguration
 from azureml.core.conda_dependencies import CondaDependencies
