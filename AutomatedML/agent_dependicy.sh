@@ -9,3 +9,4 @@ pip install --upgrade azureml-sdk[cli]
 pip install azureml-datadrift, azureml-train-automl
 pip install azureml-explain-model
 pip install argparse
+pip install xgboost
