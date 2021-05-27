@@ -5,7 +5,6 @@ import os
 
 from azureml.core import Workspace, Experiment
 
-from azureml.contrib.dataset.labeled_dataset import _LabeledDatasetFactory, LabeledDatasetTask
 from azureml.core import Dataset
 
 from azureml.core.authentication import ServicePrincipalAuthentication
