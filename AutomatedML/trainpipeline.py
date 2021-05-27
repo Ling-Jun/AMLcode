@@ -69,6 +69,14 @@ ws = Workspace.get(name="mlopsdev",
 
 ws.get_details()
 
+def_data_store = ws.get_default_datastore()
+
+# Get the blob storage associated with the workspace
+def_blob_store = Datastore(ws, "workspaceblobstore")
+
+# Get file storage associated with the workspace
+def_file_store = Datastore(ws, "workspacefilestore")
+
 print('Workspace name: ' + ws.name, 
       'Azure region: ' + ws.location, 
       'Subscription id: ' + ws.subscription_id, 
