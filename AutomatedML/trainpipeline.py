@@ -165,7 +165,7 @@ print("Pipeline validation complete")
 pipeline_run1 = Experiment(ws, 'Titanic_Pipeline_Notebook').submit(pipeline1)
 pipeline_run1.wait_for_completion()
 
-RunDetails(pipeline_run1).show()
+# RunDetails(pipeline_run1).show()
 
 step_runs = pipeline_run1.get_children()
 for step_run in step_runs:
